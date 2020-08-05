@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+/* 全体の設定 */
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+.header, .main, .footer {
+  width: 100%;
+}
+
+/* ヘッダー */
+.header {
+  position:fixed;
+  top: 0;
+  z-index:10;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.logo {
+  font-size:0;
+  /* float: left;  */
+  text-align: center;
+}
+.logo a {
+  display: block;
+  width: 50%;
+}
+.logo img {
+  width: 100%;   /* 横幅を割合で指定 */ 
+}
+.navi {
+  margin-left: auto;
+}
+.navi .navi-item {
+  display: inline;
+  margin: 0 5px;
+  font-size: 1.4rem;
+}
+.navi .navi-item a {
+  color: #0E2853;
+  font-family: sans-serif;
+  transition: color 0.3s;
+}
+.navi .navi-item a:hover {
+  color: #2b7cff;
+}
+.header .logo {
+  margin: 25px 60px;
+}
+.header .navi {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 60px;
+}
+.navi .navi-item {
+  margin: 0 20px;
+}
+
+/* スライダー */
+.slider {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+.figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.photo {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100vh + 40px);
+}
+.blur {
+  filter: blur(10px);
+}
+
+/* メイン */
+.items {
+  width: 100%;
+}
+.message {
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+  font-size: 1.5rem;
+  margin-top: 100px;
+  margin: 100px 110px 50px;
+}
+/* floatでおかしくならないようにする */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.message .title {
+  margin: 0 0 10px;
+  color: #111111;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #FF0000;
+  font-family: "Sawarabi Mincho";  
+}
+.message .content {
+  font-family: "Sawarabi Mincho";
+  margin-bottom: 20px;
+}
+.message a {
+  float: right;
+  color: #0E2853;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.message a::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin: 1.5px auto 0;
+  border-bottom: 1px solid #0E2853;
+  transition: width 0.3s ease-in-out;
+}
+.message a:hover::after {
+  width: 100%;
+}
+.cols {
+  text-align: center;
+}
+.item {
+  max-width: 600px;
+  display: inline-block;
+  padding: 20px;
+  margin: 0 40px 40px 40px;
+  border-top: 1px solid #eee;
+  transition: 0.5s;
+}
+.item:hover {
+  opacity: 0.5;
+}
+.item .img {
+  float: left;
+  width: 100px;
+}
+.item .text{
+  float: left;
+  margin-left: 25px;
+  text-align: left;
+}
+.item .title {
+  display: block;
+  margin: 0 0 10px;
+  color: #111111;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.item .content {
+  display: block;
+  width: 400px;
+  color: #777777;
+  font-size: 1.5rem;
+  word-break: normal;
+}
+
+/* フッター */
+.footer {
+  height: 100%;
+  background-color: #0E2853;
+  color: #fff;
+  padding: 20px 50px;
+}
+.com-address {
+  text-align: right;
+  margin: 20px;
+  padding: 10px 0 110px;
+  border-bottom: 1px solid #444;
+}
+.company, .address {
+  display: inline-block;
+  text-align: left;
+  margin:0 40px;
+  vertical-align: top;
+}
+.company a {
+  color: #fff;
+  display: block;
+  transition: opacity 0.3s;
+}
+.company a:hover, .privacy-policy a:hover {
+  opacity: 0.5;
+}
+.company h3, .address h3 {
+  font-size: 1.75rem;
+}
+.com-1::after {
+  content: 'company profile';
+  color: #777;
+}
+.com-2::after {
+  content: 'business';
+  color: #777;
+}
+.com-3::after {
+  content: 'contact us';
+  color: #777;
+}
+.com-1, .com-2, .com-3 {
+  margin: 10px 0;
+}
+.com-1 *, .com-2 *, .com-3 * {
+  margin: 0;
+}
+.com-1, .com-2, .com-3, .address p  {
+  font-size: 1.25rem;
+}
+.address p {
+  margin: 7.5px 0;
+}
+.copylight div{
+  display: inline-block;
+  margin: 10px 0;
+}
+.copyright-sign {
+  padding-left: 20px;
+}
+.privacy-policy {
+  padding-left: 200px;
+}
+.privacy-policy span {
+  padding: 0 20px;
+}
+.privacy-policy a {
+  color: #fff;
+  transition: opacity 0.3s;
+}
+.privacy-right {
+  border-left: 1px solid #444;
+}
+.copylight .logo {
+  float: right;
+}
+
